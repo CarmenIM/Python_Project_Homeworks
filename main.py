@@ -1,3 +1,5 @@
+#Homework number 1
+
 my_list = [7, 8, 9, 2, 3, 1, 4, 10, 5, 6]
 
 # print the initial list
@@ -26,5 +28,6 @@ for i in my_list:
     if i % 3 != 0:
         continue
     print(f'can be divided by 3 -> {i}')
+
 
 
