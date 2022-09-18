@@ -1,37 +1,30 @@
-
 my_list = [7, 8, 9, 2, 3, 1, 4, 10, 5, 6]
 
-#print the initial list
+# print the initial list
 print(my_list)
 
-#sort in increasing order
+# sort from least to greatest
 my_list.sort()
 print(my_list)
 
-#sort in decreasing order
+# sort from greatest to least
 my_list = sorted(my_list, reverse=True)
 print(my_list)
 
-#get odd values
-def get_odd_numbers(numbers):
-    odd_numbers = []
+# list with even numbers
+res = my_list[::2]
+# print result
+print(str(res))
 
-    for number in numbers:
-        if number % 2 == 1:
-            odd_numbers.append(number)
+# list with odd numbers
+res = my_list[1::2]
+# print result
+print(str(res))
 
-    return odd_numbers
-numbers = [7, 8, 9, 2, 3, 1, 4, 10, 5, 6]
-print(get_odd_numbers(numbers))
+# divided by 3
+for i in my_list:
+    if i % 3 != 0:
+        continue
+    print(f'can be divided by 3 -> {i}')
 
-#get even values
-def get_even_numbers(numbers):
-    even_numbers = []
 
-    for number in numbers:
-        if number % 2 == 0:
-            even_numbers.append(number)
-
-    return even_numbers
-numbers = [7, 8, 9, 2, 3, 1, 4, 10, 5, 6]
-print(get_even_numbers(numbers))
