@@ -24,10 +24,10 @@ res = my_list[1::2]
 print(str(res))
 
 # divided by 3
-for i in my_list:
-    if i % 3 != 0:
-        continue
-    print(f'can be divided by 3 -> {i}')
+res = my_list[1::3]
+# print result
+print(str(res))
+
 
 
 
