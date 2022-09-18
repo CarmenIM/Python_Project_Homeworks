@@ -1,20 +1,3 @@
-# # 1
-# def my_function(*args,**kwargs):
-#     sum = 0
-#
-#     for x in param_1:
-#         if type(x) == int or type(x) == float:
-#             sum += x
-#     else:
-#         return sum
-#
-#
-# print(my_function(1, 5, -3, 'abc', [12, 56, 'cad']))
-# print(my_function())
-# print(my_function(2, 4, 'abc', param_1=2))
-
-
-# 2
 def get_sum(n):
     if n == 0:
         return 0
