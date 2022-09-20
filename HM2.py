@@ -13,10 +13,10 @@ print(f1())
 print(f1(2, 4, 'abc', param_1=2))
 
 
-# 2 Sum of even numbers selected from a value
+# 2 #total, even, odd
 def f2(n):
     if n == 0:
-        return 0, 0, 0 #total, even, odd
+        return 0, 0, 0
 
     total, even, odd = f2(n-1)
     total += n
