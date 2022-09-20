@@ -1,51 +1,49 @@
 # 1 First
-def my_function(*args, **kwargs):
-    sum = 0
+def f1(*args, **kwargs):
+    s = 0
 
-    for x in args:
-        if type(x) == int or type(x) == float:
-            sum =sum + x
-    else:
-        return sum
+    for param in args:
+        if type(param) == int or type(param) == float:
+            s += param
 
+    return s
 
-print(my_function(1, 5, -3, 'abc', [12, 56, 'cad']))
-print(my_function())
-print(my_function(2, 4, 'abc', param_1=2))
+print(f1(1, 5, -3, 'abc', [12, 56, 'cad']))
+print(f1())
+print(f1(2, 4, 'abc', param_1=2))
 
 
 # 2 Sum of even numbers selected from a value
-maximum = int(input(" Please Enter the Maximum Value : "))
-total = 0
+def f2(n):
+    if n == 0:
+        return 0, 0, 0 #total, even, odd
 
-for number in range(1, maximum+1):
-    if(number % 2 == 0):
-        print("{0}".format(number))
-        total = total + number
+    total, even, odd = f2(n-1)
+    total += n
 
-print("The Sum of Even Numbers from 1 to {0} = {1}".format(number, total))
+    if n % 2 == 0:
+        even += n
+    else:
+        odd += n
 
-# Sum of odd numbers selected from a value
+    return total, even, odd
 
-maximum = int(input(" Please Enter the Maximum Value : "))
-Oddtotal = 0
+n_total, n_even, n_odd = f2(5)
+print('total =', n_total)
+print('even = ', n_even)
+print('odd = ', n_odd)
 
-for number in range(1, maximum+1):
-    if(number % 2 != 0):
-        print("{0}".format(number))
-        Oddtotal = Oddtotal + number
-
-print("The Sum of Odd Numbers from 1 to {0} = {1}".format(number, Oddtotal))
 
 
 # Return the value inserted if the number is integer
+def f3():
+    x = input()
 
-user_input = input("Please enter the number here -> ")
+    try:
+        x = int(x)
+    except ValueError:
+            x = 0
 
-try:
-    int(user_input)
-    it_is = user_input
-except ValueError:
-    it_is = 0
+    return x
 
-print(it_is)
+print(f3())
