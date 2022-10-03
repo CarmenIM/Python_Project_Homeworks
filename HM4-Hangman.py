@@ -19,7 +19,10 @@ while not done:
     guess = input(f"Allowed errors left {allowed_errors}, Next guess please: ")
     guesses.append(guess.lower())
     if not guess.isalpha():
-         print('The character is not a letter!')
+         print("The character is not a letter!")
+         continue
+    elif not len(guess.lower()) == 1:
+         print("Please enter only one letter")
          continue
     elif guess.lower() not in word.lower():
         allowed_errors -= 1

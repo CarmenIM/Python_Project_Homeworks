@@ -163,7 +163,6 @@ cough
 country
 cover
 cow
-crack
 credit
 crime
 cruel
@@ -483,8 +482,6 @@ now
 number
 nut
 observation
-of
-off
 offer
 office
 oil
@@ -635,7 +632,6 @@ sense
 separate
 serious
 servant
-sex
 shade
 shake
 shame
@@ -655,8 +651,6 @@ silver
 simple
 sister
 size
-skin
-
 skirt
 sky
 sleep
@@ -672,14 +666,12 @@ smooth
 snake
 sneeze
 snow
-so
 soap
 society
 sock
 soft
 solid
 some
-
 son
 song
 sort
