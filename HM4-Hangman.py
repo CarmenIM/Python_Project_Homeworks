@@ -16,7 +16,7 @@ while not done:
             print("_", end=" ")
     print("")
 
-    guess = input(f"Allowed errors left {allowed_errors}, Next guess please: ")
+    guess = input(f"Allowed errors left {allowed_errors}, Next guess please:  ")
     guesses.append(guess.lower())
     if not guess.isalpha():
          print("The character is not a letter!")
