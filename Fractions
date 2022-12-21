@@ -1,0 +1,41 @@
+
+if __name__ == '__main__':
+
+
+    class Fraction:
+
+        def __init__(self, numerator, denominator):
+            self.numerator = numerator
+            self.denominator = denominator
+
+        def __str__(self):
+            return str(self.numerator) + "/" + str(self.denominator)
+
+        @staticmethod
+        def __add__(self, secondfraction):
+            new_numerator = self.numerator * secondfraction.denominator + self.denominator * secondfraction.numerator
+            new_denominator = self.denominator * secondfraction.denominator
+
+            return Fraction(new_numerator, new_denominator)
+
+        @staticmethod
+        def __sub__(self, secondfraction):
+            new_numerator = self.numerator * secondfraction.denominator - self.denominator * secondfraction.numerator
+            new_denominator = self.denominator * secondfraction.denominator
+
+            return Fraction(new_numerator, new_denominator)
+
+        def inverse(self):
+            return Fraction(self.denominator, self.numerator)
+
+        def __str__(self):
+            return f'{self.numerator}/{self.denominator}'
+
+
+    my_fr = Fraction(2, 5)
+    my_fr_2 = Fraction(1, 2)
+
+    print(my_fr.__str__())
+    print(my_fr.__add__(my_fr, my_fr_2))
+    print(my_fr.__sub__(my_fr, my_fr_2))
+    print(my_fr.inverse())
